@@ -14,13 +14,23 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"] # Canonical
 }
 
+// Create and associate Elastic IP to bastion host
+resource "aws_eip" "bastion_eip" {
+  
+  instance = [aws_instance.web]
+  vpc      = true
+  
+}
+
 resource "aws_instance" "web" {
   ami                    = data.aws_ami.ubuntu.id
   instance_type          = var.instance_type
   subnet_id              = var.subnet_id
   vpc_security_group_ids = var.vpc_security_group_ids
+  public_ip              = aws_eip.bastion_eip.
 
   tags = {
     Name = "HelloWorld"
   }
+
 }
