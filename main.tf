@@ -1,3 +1,4 @@
+// Get latest AMI for Ubuntu 18.04
 data "aws_ami" "ubuntu" {
   most_recent = true
 
@@ -17,12 +18,13 @@ data "aws_ami" "ubuntu" {
 // Create and associate Elastic IP to bastion host
 resource "aws_eip" "bastion_eip" {
   
-  instance = [aws_instance.web]
+  instance = [aws_instance.bastion]
   vpc      = true
   
 }
 
-resource "aws_instance" "web" {
+// Create bastion host insntace
+resource "aws_instance" "bastion" {
   ami                    = data.aws_ami.ubuntu.id
   instance_type          = var.instance_type
   subnet_id              = var.subnet_id
