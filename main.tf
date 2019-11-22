@@ -18,7 +18,7 @@ data "aws_ami" "ubuntu" {
 // Create and associate Elastic IP to bastion host
 resource "aws_eip" "bastion_eip" {
   
-  instance = [aws_instance.bastion]
+  instance = aws_instance.bastion.id
   vpc      = true
   
 }
