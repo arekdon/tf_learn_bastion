@@ -14,4 +14,7 @@ variable "vpc_security_group_ids" {
   type        = list(string)
 }
 
-
+variable "bastion_pkey" {
+  description = "Pkey for bastion ssh access"
+  type        = string
+}
