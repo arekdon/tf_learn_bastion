@@ -25,7 +25,7 @@ resource "aws_eip" "bastion_eip" {
 
 resource "aws_key_pair" "bastionkey" {
   key_name   = "bastion-key"
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDN/xCr0xHmaeVVWylGeWWOT6rJj9RUpFneQ2IY9VXe0JyDFrLplXf8V9Snb9Th6r9xxVFOpIO6JqlUhvY6Q89r1/g8xpiLXbjXpzMj6hEcQYum0fe0wlM0ju6AQlxX7+v/b+S7qpGl938m5V5CRiiHERaFEn/VSNXK351ad2fM42BkQ7rSh0/DC1RQ9ni/1OlsjA3UBbashdC8XSiHwTgcX7cK4uw/roxDjcmN4tD+9vH5ISqM0mK7M75ermXXB+aaZWUe5E9XG/VSmubjvBEmBCo5KSlxJy9cVFzalXK4bnpIU94Al5llJ9fsSUxazzanI6ILeDJxJlzlm3LlPPgX"
+  public_key = var.pkey
 }
 
 // Create bastion host insntace
