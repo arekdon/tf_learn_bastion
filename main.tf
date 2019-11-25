@@ -25,7 +25,7 @@ resource "aws_eip" "bastion_eip" {
 
 resource "aws_key_pair" "bastionkey" {
   key_name   = "bastion-key"
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC7uRjphuGD4lJ6AGPujMBhbrzOrTei5i0T9xarbZ4Xs2hV18tkjI4ILrNnHsPRuwLHrVIFTeg8qtbrLRGpRMkqMy7A3/KP3zQM89Cibw/YpjdsPt6igBfrhi5lLde1Of64bh9c70npMCu7AZPwIOr0ZNI78rj1qk76kf77nL6ppH8gP6QpCg6e8dOpKO6sDpGSk476zxn0CszQS/uTiJ3nzcMmqJGHgAu0FMIg8vrJ9TpKZ4ab51kqTMluZ0nFXWaj/wS9zwIstlqGUtjvos5opMMF0w+XaOxGIUOYw0Frbk3AnUYu/8BWm2lbG3LocXnlZjxzCCnicrCVpnmbQ13B arekd@arek-pc"
+  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDN/xCr0xHmaeVVWylGeWWOT6rJj9RUpFneQ2IY9VXe0JyDFrLplXf8V9Snb9Th6r9xxVFOpIO6JqlUhvY6Q89r1/g8xpiLXbjXpzMj6hEcQYum0fe0wlM0ju6AQlxX7+v/b+S7qpGl938m5V5CRiiHERaFEn/VSNXK351ad2fM42BkQ7rSh0/DC1RQ9ni/1OlsjA3UBbashdC8XSiHwTgcX7cK4uw/roxDjcmN4tD+9vH5ISqM0mK7M75ermXXB+aaZWUe5E9XG/VSmubjvBEmBCo5KSlxJy9cVFzalXK4bnpIU94Al5llJ9fsSUxazzanI6ILeDJxJlzlm3LlPPgX"
 }
 
 // Create bastion host insntace
