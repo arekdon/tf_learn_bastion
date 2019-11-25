@@ -25,7 +25,7 @@ resource "aws_eip" "bastion_eip" {
 
 resource "aws_key_pair" "bastionkey" {
   key_name   = "bastion-key"
-  public_key = var.pkey
+  public_key = var.bastion_pkey
 }
 
 // Create bastion host insntace
